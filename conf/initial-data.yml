@@ -1,0 +1,173 @@
+User(bob):
+   email:           bob@gmail.com
+   password:        secret
+   fullname:        Bob
+   isAdmin:         true
+
+User(jeff):
+    email:          jeff@gmail.com
+    password:       secret
+    fullname:       Jeff
+
+Team(RealMadrid):
+    fullname:       Real Madrid
+    logoURL:        http://footballdatabase.com/logos/club/80px/2.png
+
+Team(BayernMunchen):
+    fullname:       Bayern Munchen
+    logoURL:        http://footballdatabase.com/logos/club/80px/16.png
+
+Team(Barcelona):
+    fullname:       Barcelona
+    logoURL:        http://footballdatabase.com/logos/club/80px/1.png
+
+Team(Juventus):
+    fullname:       Juventus
+    logoURL:        http://footballdatabase.com/logos/club/80px/68.png
+
+Team(AtleticoMadrid):
+    fullname:       Atletico Madrid
+    logoURL:        http://footballdatabase.com/logos/club/80px/72.png
+
+Team(Chelsea):
+    fullname:       Chelsea
+    logoURL:        http://footballdatabase.com/logos/club/80px/43.png
+
+Team(Arsenal):
+    fullname:       Arsenal
+    logoURL:        http://footballdatabase.com/logos/club/80px/7.png
+
+Team(BorussiaDortmund):
+    fullname:       Borussia Dortmund
+    logoURL:        http://footballdatabase.com/logos/club/80px/4.png
+
+Team(Roma):
+    fullname:       Roma
+    logoURL:        http://footballdatabase.com/logos/club/80px/31.png
+
+Team(TottenhamHotspur):
+    fullname:       Tottenham Hotspur
+    logoURL:        http://footballdatabase.com/logos/club/80px/28.png
+
+Score(zero):
+    team1_score:     0
+    team2_score:     0
+
+Score(s01):
+    team1_score:     0
+    team2_score:     1
+
+Score(s10):
+    team1_score:     1
+    team2_score:     0
+
+Score(s11):
+    team1_score:     1
+    team2_score:     1
+
+Score(s20):
+    team1_score:     2
+    team2_score:     0
+
+Score(s21):
+    team1_score:     2
+    team2_score:     1
+
+Score(s03):
+    team1_score:     0
+    team2_score:     3
+
+Match(Match1):
+    date:           2016-06-11
+    team1:          Chelsea
+    team2:          Barcelona
+    score:          zero
+
+Match(Match2):
+    date:           2016-06-18
+    team1:          Arsenal
+    team2:          BayernMunchen
+    score:          s01
+
+Match(Match3):
+    date:           2016-06-25
+    team1:          BayernMunchen
+    team2:          Roma
+    score:          s10
+
+Match(Match4):
+    date:           2016-07-02
+    team1:          Juventus
+    team2:          Chelsea
+    score:          zero
+
+Match(Match5):
+    date:           2016-07-09
+    team1:          RealMadrid
+    team2:          TottenhamHotspur
+    score:          s11
+
+Match(Match6):
+    date:           2016-07-16
+    team1:          AtleticoMadrid
+    team2:          TottenhamHotspur
+    score:          s20
+
+Match(Match7):
+    date:           2016-07-23
+    team1:          Juventus
+    team2:          BorussiaDortmund
+    score:          s20
+
+Match(Match8):
+    date:           2016-07-30
+    team1:          Barcelona
+    team2:          Roma
+    score:          s03
+
+Match(Match9):
+    date:           2016-08-06
+    team1:          AtleticoMadrid
+    team2:          RealMadrid
+    score:          s11
+
+Match(Match10):
+    date:           2016-08-13
+    team1:          BorussiaDortmund
+    team2:          Arsenal
+    score:          s01
+
+Bet(bet1):
+    author:         jeff
+    Match:          Match3
+    score:          zero
+
+Bet(bet2):
+    author:         jeff
+    Match:          Match1
+    score:          s10
+
+Bet(bet3):
+    author:         jeff
+    Match:          Match8
+    score:          s01
+
+Bet(bet4):
+    author:         jeff
+    Match:          Match8
+    score:          s03
+
+Bet(bet5):
+    author:         jeff
+    Match:          Match5
+    score:          s11
+
+Bet(bet6):
+    author:         jeff
+    Match:          Match7
+    score:          s21
+
+Bet(bet7):
+    author:         jeff
+    Match:          Match10
+    score:          s03
