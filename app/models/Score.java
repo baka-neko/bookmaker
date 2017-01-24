@@ -17,17 +17,17 @@ import javax.persistence.Entity;
 public class Score extends Model {
 
     @Required
-    public byte team1_score;
+    public byte hostTeam_score;
 
     @Required
-    public byte team2_score;
+    public byte guestTeam_score;
 
-    public Score(byte team1_score, byte team2_score) {
-        this.team1_score = team1_score;
-        this.team2_score = team2_score;
+    public Score(byte hostTeam_score, byte guestTeam_score) {
+        this.hostTeam_score = hostTeam_score;
+        this.guestTeam_score = guestTeam_score;
     }
 
     public String toString() {
-        return Messages.get("app.score.description", String.valueOf(team1_score), String.valueOf(team2_score));
+        return Messages.get("app.score.description", String.valueOf(hostTeam_score), String.valueOf(guestTeam_score));
     }
 }

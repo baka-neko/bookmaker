@@ -3,7 +3,10 @@ package models;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,6 +21,12 @@ public class Team extends Model {
     @Required
     public String fullname;
     public String logoURL;
+
+    //Удаляем все матчи с участием команды при удалении этой команды
+    @OneToMany(mappedBy="hostTeam", cascade= CascadeType.ALL)
+    public List<Match> matchesAsHost;
+    @OneToMany(mappedBy="guestTeam", cascade= CascadeType.ALL)
+    public List<Match> matchesAsGuest;
 
     public Team(String fullname) {
         this.fullname = fullname;

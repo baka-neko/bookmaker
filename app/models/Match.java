@@ -4,10 +4,9 @@ import play.data.validation.Required;
 import play.db.jpa.Model;
 import play.i18n.Messages;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,24 +24,28 @@ public class Match extends Model {
 
     @Required
     @ManyToOne
-    public Team team1;
+    public Team hostTeam;
 
     @Required
     @ManyToOne
-    public Team team2;
+    public Team guestTeam;
 
     @Required
     @ManyToOne
     public Score score;
 
+    //Удаляем все ставки на матч при удалении матча
+    @OneToMany(mappedBy="match", cascade= CascadeType.ALL)
+    public List<Bet> bets;
+
     public Match(Date date, Team team1, Team team2, Score score) {
         this.date = date;
-        this.team1 = team1;
-        this.team2 = team2;
+        this.hostTeam = team1;
+        this.guestTeam = team2;
         this.score = score;
     }
 
     public String toString() {
-        return date.toString() + " " + Messages.get("app.match.description", team1.fullname, team2.fullname);
+        return date.toString() + " " + Messages.get("app.match.description", hostTeam.fullname, guestTeam.fullname);
     }
 }

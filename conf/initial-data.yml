@@ -50,32 +50,32 @@ Team(TottenhamHotspur):
     logoURL:        http://footballdatabase.com/logos/club/80px/28.png
 
 Score(zero):
-    team1_score:     0
-    team2_score:     0
+    hostTeam_score:  0
+    guestTeam_score: 0
 
 Score(s01):
-    team1_score:     0
-    team2_score:     1
+    hostTeam_score:  0
+    guestTeam_score: 1
 
 Score(s10):
-    team1_score:     1
-    team2_score:     0
+    hostTeam_score:  1
+    guestTeam_score: 0
 
 Score(s11):
-    team1_score:     1
-    team2_score:     1
+    hostTeam_score:  1
+    guestTeam_score: 1
 
 Score(s20):
-    team1_score:     2
-    team2_score:     0
+    hostTeam_score:  2
+    guestTeam_score: 0
 
 Score(s21):
-    team1_score:     2
-    team2_score:     1
+    hostTeam_score:  2
+    guestTeam_score: 1
 
 Score(s03):
-    team1_score:     0
-    team2_score:     3
+    hostTeam_score:  0
+    guestTeam_score: 3
 
 Match(Match1):
     date:           2016-06-11
